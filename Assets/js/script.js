@@ -30,22 +30,22 @@ function generatePassword() {
 
    //   for (var i = 0, n = charset.length; i < numCharacter; ++i) {
    for (var i = 0; i < length; i++) {
-      if (uppercases === true && lastPassword.length < length) {
+      if (uppercases === true && lastPassword.length < numCharacter) {
          var select = Math.floor(Math.random() * 26);
          lastPassword = lastPassword + upperCase.charAt(select);
       }
-      if (lowercases === true && lastPassword.length < length) {
+      if (lowercases === true && lastPassword.length < numCharacter) {
          var select = Math.floor(Math.random() * 26);
          lastPassword = lastPassword + lowerCase.charAt(select);
 
          // retVal += charset.charAt(Math.floor(Math.random() * n));
       }
-      if (numbers === true && lastPassword.length < length) {
+      if (numbers === true && lastPassword.length < numCharacter) {
          var select = Math.floor(Math.random() * 26);
          lastPassword = lastPassword + number.charAt(select);
          //   return retVal
       }
-      if (symbols === true && lastPassword.length < length) {
+      if (symbols === true && lastPassword.length < numCharacter) {
          var select = Math.floor(Math.random() * 26);
          lastPassword = lastPassword + special.charAt(select);
       }
